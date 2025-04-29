@@ -33,7 +33,7 @@ z=qnorm(0.975)
 z
 
 x_values=seq(sample_mean - 4*sample_sd, sample_mean + 4*sample_sd, length.out = 1000)
-y_values=dnorm(x_values, mean = sample_mean, sd = sample_sd)
+y_values=dnorm(x_values, mean = sample_mean, sd = sample_sd/500)
 normal_frame=data.frame(x = x_values, y = y_values)
 
 ggplot(normal_frame,aes(x=x, y=y))+
